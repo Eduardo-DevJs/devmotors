@@ -17,6 +17,8 @@
     display: none;
     list-style-type: none;
     padding: 14px 0;
+    row-gap: 24px;
+    column-gap: 14px;
 
     li a {
         background-color: #121212;
@@ -32,8 +34,46 @@
     }
 }
 
+.closeButton {
+    background: transparent;
+}
+
 @media (max-width: 768px){
     .submenuIcon {
         display: inline-flex;
+    }
+
+    .list {
+        z-index: 99;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        gap: 24px;
+        width: 100%;
+        height: 100%;
+
+        &.open {
+            display: flex;
+        }
+    }
+
+    .list li {
+        a {
+            background-color: transparent;
+            font-size: 1.25rem;
+            color: #121212;
+            font-weight: bold;
+            transition: all .6s;
+        }
+
+        a:hover {
+            background-color: #121212;
+            color: #fff;
+        }
     }
 }
