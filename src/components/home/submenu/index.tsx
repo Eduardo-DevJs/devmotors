@@ -3,8 +3,13 @@ import Link from "next/link";
 import styles from "./style.module.scss";
 import { X, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
+import { MenuProps } from "@/utils/menu.type";
 
-export default function Submenu() {
+interface SubMenuProps {
+  menu: MenuProps;
+}
+
+export default function Submenu({ menu }: SubMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -27,7 +32,7 @@ export default function Submenu() {
     <section className={styles.submenu}>
       <div onClick={toggleMenu} className={styles.submenuIcon}>
         <Menu size={34} color="#121212" />
-        Serviços 
+        Serviços
       </div>
       <ul className={`${styles.list} ${isOpen ? styles.open : ""}`}>
         {isOpen && (
