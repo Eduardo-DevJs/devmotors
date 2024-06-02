@@ -45,6 +45,9 @@ export default async function page({
               className={styles.imageAbout}
               alt={objects[0].title}
               fill={true}
+              quality={100}
+              priority={true}
+              sizes="(max-width: 480px) 100vw, (max-width: 75vw, 60vw)"
               src={objects[0].metadata.description.banner.url}
             />
           </div>

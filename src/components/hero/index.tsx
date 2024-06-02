@@ -34,6 +34,7 @@ export default function Hero({
           priority={true}
           quality={100}
           fill={true}
+          sizes="(max-width: 480px) 100vw, (max-width: 75vw, 60vw)"
           alt={heading}
         />
       </div>

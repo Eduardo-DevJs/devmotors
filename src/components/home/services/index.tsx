@@ -16,6 +16,7 @@ export default function Services({ object }: HomeProps) {
             alt="Imagem lustrativa da empresa"
             fill={true}
             quality={100}
+            sizes="(max-width: 480px) 100vw, (max-width: 75vw, 60vw)"
             src={object.metadata.about.banner.url}
           />
         </div>
@@ -29,6 +30,7 @@ export default function Services({ object }: HomeProps) {
                 className={styles.imageService}
                 alt="Imagem do serviço"
                 fill={true}
+                sizes="(max-width: 480px) 100vw, (max-width: 75vw, 60vw)"
                 quality={100}
                 src={service.image.url}
               />
