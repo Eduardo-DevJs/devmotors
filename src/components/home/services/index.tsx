@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Services({ object }: HomeProps) {
   return (
     <>
-      <section className={styles.containerAbout}>
+      <section id="servicos" className={styles.containerAbout}>
         <article className={styles.innerAbout}>
           <h1 className={styles.title}>Sobre</h1>
           <p>{object.metadata.about.description}</p>
@@ -20,10 +20,10 @@ export default function Services({ object }: HomeProps) {
           />
         </div>
       </section>
-      <h2 className={styles.servicesTitle}>Conheça nosso serviços</h2>
+      <h2 className={styles.serviceTitle}>Conheça nosso serviços</h2>
       <section className={styles.services}>
         {object.metadata.services.map((service) => (
-          <article key={service.description} className={styles.services}>
+          <article key={service.description}>
             <div className={styles.innerService}>
               <Image
                 className={styles.imageService}

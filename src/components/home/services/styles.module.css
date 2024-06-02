@@ -77,12 +77,13 @@
 }
 
 .services {
+  margin-top: 15px;
   display: flex;
   gap: 24px;
   flex-direction: column;
 }
 
-.servieces p {
+.services p {
   text-align: center;
   margin: 8px 0;
   font-size: 18px;
@@ -112,5 +113,25 @@
 
   & + p {
     font-weight: bold;
+  }
+}
+
+/* RESPONSIVIDADE */
+@media (min-width: 640px){
+  .services {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .innerService{
+    width: 280px;
+    height: 200;
+  }
+
+  .serviceTitle {
+    margin-top: 54px;
+    font-size: 30px;
   }
 }
