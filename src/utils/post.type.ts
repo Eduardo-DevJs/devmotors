@@ -1,5 +1,5 @@
 export interface PostProps {
-  object: ObjectProps[];
+  objects: ObjectProps[];
 }
 
 interface ObjectProps {
