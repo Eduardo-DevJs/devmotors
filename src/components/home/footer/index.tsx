@@ -1,6 +1,6 @@
 import { HomeProps } from "@/utils/home.type";
 import styles from "./styles.module.scss";
-import { Clock, Mail, Phone } from "lucide-react";
+import { Clock, Mail, Map, Phone } from "lucide-react";
 
 export default function Footer({ object }: HomeProps) {
   return (
@@ -16,10 +16,17 @@ export default function Footer({ object }: HomeProps) {
             </div>
           </div>
           <div className={styles.item}>
-            <Phone size={28} color="#fff" />
+            <Map size={28} color="#fff" />
             <div>
               <strong>Endereço</strong>
               <p>{object.metadata.contact.address}</p>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <Phone size={28} color="#fff" />
+            <div>
+              <strong>Telefone</strong>
+              <p>{object.metadata.contact.phone}</p>
             </div>
           </div>
           <div className={styles.item}>
@@ -31,6 +38,16 @@ export default function Footer({ object }: HomeProps) {
           </div>
         </div>
       </section>
+
+      <a
+        href={object.metadata.cta_button.url}
+        target="_blank"
+        className={styles.link}
+      >
+        <Phone size={24} color="#fff" />
+        {object.metadata.cta_button.title}
+      </a>
+      <p className={styles.copyText}>Todos os direitos reservados {object.title} @{`${new Date().getFullYear()}`}</p>
     </footer>
   );
 }
