@@ -41,7 +41,7 @@ export default async function page({
           </article>
 
           <div className={styles.bannerAbout}>
-            <Image 
+            <Image
               className={styles.imageAbout}
               alt={objects[0].title}
               fill={true}

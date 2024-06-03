@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { URLSearchParams } from "url";
 
 export async function getDataHome() {
@@ -50,13 +51,12 @@ export async function getItemBySlug(itemSlug: string) {
   try {
     const res = await fetch(url, { next: { revalidate: 120 } });
 
-    if(!res.ok){
+    if (!res.ok) {
       throw new Error("Failed to fetch data");
-
     }
 
-    return res.json()
+    return res.json();
   } catch (error) {
-    throw new Error("Failed get item by slug");
+    redirect("/");
   }
 }
