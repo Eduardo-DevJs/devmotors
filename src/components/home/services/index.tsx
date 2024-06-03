@@ -21,7 +21,7 @@ export default function Services({ object }: HomeProps) {
           />
         </div>
       </section>
-      <h2 className={styles.serviceTitle}>Conheça nosso serviços</h2>
+      <h2 className={styles.serviceTitle}>Conheça nossos serviços</h2>
       <section className={styles.services}>
         {object.metadata.services.map((service) => (
           <article key={service.description}>
